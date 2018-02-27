@@ -1,24 +1,17 @@
 # Machine Learning API
 > ICDSS Machine Learning Workshop Series: Machine Learning API
 
+- [Prerequisites](#prerequisites)
+- [Overview](#overview)
+- [License](#license)
+
 ## Getting Started
 
 ### macOS
 
 1. `source scripts/setup.sh`
 
-# Neural Networks
 
-> ICDSS Machine Learning Workshop Series: Neural Networks 
-
-- [Prerequisites](#prerequisites)
-- [Overview](#overview)
-- [Agenda](#agenda)
-    - [Theory](#theory)
-    - [Applications](#applications)
-    - [Codelab](#codelab)
-- [Resources](#resources)
-- [License](#license)
 
 ## Prerequisites
 
@@ -33,13 +26,6 @@ In this workshop we will cover the most frequently used High-Level Machine Learn
 The focus of this workshop will be on how to the implementation of abstract models in code,
 using the universal `fit`-`predict`-`score` pattern most machine learning APIs follow.
 Multiple sandbox projects will be attempted, including multivariate regression, classification and time-series forecasting.
-
-#### Setup
-
-##### macOS
-
-1. Follow `Python` setup environment, according to `Docs` repocitory.
-2. Run `source scripts/setup.sh` command.
 
 ## License
 
