@@ -1,0 +1,12 @@
+numpy
+pandas
+scipy
+matplotlib
+seaborn
+scikit-learn
+keras
+tensorflow
+fbprophet
+jupyter
+h5py
+pandas-datareader

@@ -1,0 +1,673 @@
+backend: tensorflow
+class_name: Model
+config:
+  input_layers:
+  - [X, 0, 0]
+  layers:
+  - class_name: InputLayer
+    config:
+      batch_input_shape: !!python/tuple [null, 50, 86]
+      dtype: float32
+      name: X
+      sparse: false
+    inbound_nodes: []
+    name: X
+  - class_name: LSTM
+    config:
+      activation: tanh
+      activity_regularizer: null
+      bias_constraint: null
+      bias_initializer:
+        class_name: Zeros
+        config: {}
+      bias_regularizer: null
+      dropout: 0.0
+      go_backwards: false
+      implementation: 1
+      kernel_constraint: null
+      kernel_initializer:
+        class_name: VarianceScaling
+        config: {distribution: uniform, mode: fan_avg, scale: 1.0, seed: null}
+      kernel_regularizer: null
+      name: LSTM1
+      recurrent_activation: hard_sigmoid
+      recurrent_constraint: null
+      recurrent_dropout: 0.0
+      recurrent_initializer:
+        class_name: Orthogonal
+        config: {gain: 1.0, seed: null}
+      recurrent_regularizer: null
+      return_sequences: true
+      return_state: false
+      stateful: false
+      trainable: true
+      unit_forget_bias: true
+      units: 256
+      unroll: false
+      use_bias: true
+    inbound_nodes:
+    - - - X
+        - 0
+        - 0
+        - {}
+    name: LSTM1
+  - class_name: Dropout
+    config: {name: DROP1, noise_shape: null, rate: 0.2, seed: null, trainable: true}
+    inbound_nodes:
+    - - - LSTM1
+        - 0
+        - 0
+        - {}
+    name: DROP1
+  - class_name: Dense
+    config:
+      activation: softmax
+      activity_regularizer: null
+      bias_constraint: null
+      bias_initializer:
+        class_name: Zeros
+        config: {}
+      bias_regularizer: null
+      kernel_constraint: null
+      kernel_initializer:
+        class_name: VarianceScaling
+        config: {distribution: uniform, mode: fan_avg, scale: 1.0, seed: null}
+      kernel_regularizer: null
+      name: Y
+      trainable: true
+      units: 86
+      use_bias: true
+    inbound_nodes:
+    - - - DROP1
+        - 0
+        - 0
+        - {}
+    name: Y
+  name: model_5
+  output_layers:
+  - [Y, 0, 0]
+keras_version: 2.1.4
+backend: tensorflow
+class_name: Model
+config:
+  input_layers:
+  - [X, 0, 0]
+  layers:
+  - class_name: InputLayer
+    config:
+      batch_input_shape: !!python/tuple [null, 50, 86]
+      dtype: float32
+      name: X
+      sparse: false
+    inbound_nodes: []
+    name: X
+  - class_name: LSTM
+    config:
+      activation: tanh
+      activity_regularizer: null
+      bias_constraint: null
+      bias_initializer:
+        class_name: Zeros
+        config: {}
+      bias_regularizer: null
+      dropout: 0.0
+      go_backwards: false
+      implementation: 1
+      kernel_constraint: null
+      kernel_initializer:
+        class_name: VarianceScaling
+        config: {distribution: uniform, mode: fan_avg, scale: 1.0, seed: null}
+      kernel_regularizer: null
+      name: LSTM1
+      recurrent_activation: hard_sigmoid
+      recurrent_constraint: null
+      recurrent_dropout: 0.0
+      recurrent_initializer:
+        class_name: Orthogonal
+        config: {gain: 1.0, seed: null}
+      recurrent_regularizer: null
+      return_sequences: true
+      return_state: false
+      stateful: false
+      trainable: true
+      unit_forget_bias: true
+      units: 256
+      unroll: false
+      use_bias: true
+    inbound_nodes:
+    - - - X
+        - 0
+        - 0
+        - {}
+    name: LSTM1
+  - class_name: Dropout
+    config: {name: DROP1, noise_shape: null, rate: 0.2, seed: null, trainable: true}
+    inbound_nodes:
+    - - - LSTM1
+        - 0
+        - 0
+        - {}
+    name: DROP1
+  - class_name: Dense
+    config:
+      activation: softmax
+      activity_regularizer: null
+      bias_constraint: null
+      bias_initializer:
+        class_name: Zeros
+        config: {}
+      bias_regularizer: null
+      kernel_constraint: null
+      kernel_initializer:
+        class_name: VarianceScaling
+        config: {distribution: uniform, mode: fan_avg, scale: 1.0, seed: null}
+      kernel_regularizer: null
+      name: Y
+      trainable: true
+      units: 86
+      use_bias: true
+    inbound_nodes:
+    - - - DROP1
+        - 0
+        - 0
+        - {}
+    name: Y
+  name: model_5
+  output_layers:
+  - [Y, 0, 0]
+keras_version: 2.1.4
+backend: tensorflow
+class_name: Model
+config:
+  input_layers:
+  - [X, 0, 0]
+  layers:
+  - class_name: InputLayer
+    config:
+      batch_input_shape: !!python/tuple [null, 50, 86]
+      dtype: float32
+      name: X
+      sparse: false
+    inbound_nodes: []
+    name: X
+  - class_name: LSTM
+    config:
+      activation: tanh
+      activity_regularizer: null
+      bias_constraint: null
+      bias_initializer:
+        class_name: Zeros
+        config: {}
+      bias_regularizer: null
+      dropout: 0.0
+      go_backwards: false
+      implementation: 1
+      kernel_constraint: null
+      kernel_initializer:
+        class_name: VarianceScaling
+        config: {distribution: uniform, mode: fan_avg, scale: 1.0, seed: null}
+      kernel_regularizer: null
+      name: LSTM1
+      recurrent_activation: hard_sigmoid
+      recurrent_constraint: null
+      recurrent_dropout: 0.0
+      recurrent_initializer:
+        class_name: Orthogonal
+        config: {gain: 1.0, seed: null}
+      recurrent_regularizer: null
+      return_sequences: true
+      return_state: false
+      stateful: false
+      trainable: true
+      unit_forget_bias: true
+      units: 256
+      unroll: false
+      use_bias: true
+    inbound_nodes:
+    - - - X
+        - 0
+        - 0
+        - {}
+    name: LSTM1
+  - class_name: Dropout
+    config: {name: DROP1, noise_shape: null, rate: 0.2, seed: null, trainable: true}
+    inbound_nodes:
+    - - - LSTM1
+        - 0
+        - 0
+        - {}
+    name: DROP1
+  - class_name: Dense
+    config:
+      activation: softmax
+      activity_regularizer: null
+      bias_constraint: null
+      bias_initializer:
+        class_name: Zeros
+        config: {}
+      bias_regularizer: null
+      kernel_constraint: null
+      kernel_initializer:
+        class_name: VarianceScaling
+        config: {distribution: uniform, mode: fan_avg, scale: 1.0, seed: null}
+      kernel_regularizer: null
+      name: Y
+      trainable: true
+      units: 86
+      use_bias: true
+    inbound_nodes:
+    - - - DROP1
+        - 0
+        - 0
+        - {}
+    name: Y
+  name: model_5
+  output_layers:
+  - [Y, 0, 0]
+keras_version: 2.1.4
+backend: tensorflow
+class_name: Model
+config:
+  input_layers:
+  - [X, 0, 0]
+  layers:
+  - class_name: InputLayer
+    config:
+      batch_input_shape: !!python/tuple [null, 50, 86]
+      dtype: float32
+      name: X
+      sparse: false
+    inbound_nodes: []
+    name: X
+  - class_name: LSTM
+    config:
+      activation: tanh
+      activity_regularizer: null
+      bias_constraint: null
+      bias_initializer:
+        class_name: Zeros
+        config: {}
+      bias_regularizer: null
+      dropout: 0.0
+      go_backwards: false
+      implementation: 1
+      kernel_constraint: null
+      kernel_initializer:
+        class_name: VarianceScaling
+        config: {distribution: uniform, mode: fan_avg, scale: 1.0, seed: null}
+      kernel_regularizer: null
+      name: LSTM1
+      recurrent_activation: hard_sigmoid
+      recurrent_constraint: null
+      recurrent_dropout: 0.0
+      recurrent_initializer:
+        class_name: Orthogonal
+        config: {gain: 1.0, seed: null}
+      recurrent_regularizer: null
+      return_sequences: true
+      return_state: false
+      stateful: false
+      trainable: true
+      unit_forget_bias: true
+      units: 256
+      unroll: false
+      use_bias: true
+    inbound_nodes:
+    - - - X
+        - 0
+        - 0
+        - {}
+    name: LSTM1
+  - class_name: Dropout
+    config: {name: DROP1, noise_shape: null, rate: 0.2, seed: null, trainable: true}
+    inbound_nodes:
+    - - - LSTM1
+        - 0
+        - 0
+        - {}
+    name: DROP1
+  - class_name: Dense
+    config:
+      activation: softmax
+      activity_regularizer: null
+      bias_constraint: null
+      bias_initializer:
+        class_name: Zeros
+        config: {}
+      bias_regularizer: null
+      kernel_constraint: null
+      kernel_initializer:
+        class_name: VarianceScaling
+        config: {distribution: uniform, mode: fan_avg, scale: 1.0, seed: null}
+      kernel_regularizer: null
+      name: Y
+      trainable: true
+      units: 86
+      use_bias: true
+    inbound_nodes:
+    - - - DROP1
+        - 0
+        - 0
+        - {}
+    name: Y
+  name: model_5
+  output_layers:
+  - [Y, 0, 0]
+keras_version: 2.1.4
+backend: tensorflow
+class_name: Model
+config:
+  input_layers:
+  - [INPUT, 0, 0]
+  layers:
+  - class_name: InputLayer
+    config:
+      batch_input_shape: !!python/tuple [null, 50, 86]
+      dtype: float32
+      name: INPUT
+      sparse: false
+    inbound_nodes: []
+    name: INPUT
+  - class_name: LSTM
+    config:
+      activation: tanh
+      activity_regularizer: null
+      bias_constraint: null
+      bias_initializer:
+        class_name: Zeros
+        config: {}
+      bias_regularizer: null
+      dropout: 0.0
+      go_backwards: false
+      implementation: 1
+      kernel_constraint: null
+      kernel_initializer:
+        class_name: VarianceScaling
+        config: {distribution: uniform, mode: fan_avg, scale: 1.0, seed: null}
+      kernel_regularizer: null
+      name: LSTM1
+      recurrent_activation: hard_sigmoid
+      recurrent_constraint: null
+      recurrent_dropout: 0.0
+      recurrent_initializer:
+        class_name: Orthogonal
+        config: {gain: 1.0, seed: null}
+      recurrent_regularizer: null
+      return_sequences: true
+      return_state: false
+      stateful: false
+      trainable: true
+      unit_forget_bias: true
+      units: 256
+      unroll: false
+      use_bias: true
+    inbound_nodes:
+    - - - INPUT
+        - 0
+        - 0
+        - {}
+    name: LSTM1
+  - class_name: Dropout
+    config: {name: DROP1, noise_shape: null, rate: 0.2, seed: null, trainable: true}
+    inbound_nodes:
+    - - - LSTM1
+        - 0
+        - 0
+        - {}
+    name: DROP1
+  - class_name: Dense
+    config:
+      activation: softmax
+      activity_regularizer: null
+      bias_constraint: null
+      bias_initializer:
+        class_name: Zeros
+        config: {}
+      bias_regularizer: null
+      kernel_constraint: null
+      kernel_initializer:
+        class_name: VarianceScaling
+        config: {distribution: uniform, mode: fan_avg, scale: 1.0, seed: null}
+      kernel_regularizer: null
+      name: OUTPUT
+      trainable: true
+      units: 86
+      use_bias: true
+    inbound_nodes:
+    - - - DROP1
+        - 0
+        - 0
+        - {}
+    name: OUTPUT
+  name: model_6
+  output_layers:
+  - [OUTPUT, 0, 0]
+keras_version: 2.1.4
+backend: tensorflow
+class_name: Sequential
+config:
+- class_name: LSTM
+  config:
+    activation: tanh
+    activity_regularizer: null
+    batch_input_shape: !!python/tuple [null, 50, 86]
+    bias_constraint: null
+    bias_initializer:
+      class_name: Zeros
+      config: {}
+    bias_regularizer: null
+    dropout: 0.0
+    dtype: float32
+    go_backwards: false
+    implementation: 1
+    kernel_constraint: null
+    kernel_initializer:
+      class_name: VarianceScaling
+      config: {distribution: uniform, mode: fan_avg, scale: 1.0, seed: null}
+    kernel_regularizer: null
+    name: LSTM
+    recurrent_activation: hard_sigmoid
+    recurrent_constraint: null
+    recurrent_dropout: 0.0
+    recurrent_initializer:
+      class_name: Orthogonal
+      config: {gain: 1.0, seed: null}
+    recurrent_regularizer: null
+    return_sequences: true
+    return_state: false
+    stateful: false
+    trainable: true
+    unit_forget_bias: true
+    units: 256
+    unroll: false
+    use_bias: true
+- class_name: Dense
+  config:
+    activation: softmax
+    activity_regularizer: null
+    bias_constraint: null
+    bias_initializer:
+      class_name: Zeros
+      config: {}
+    bias_regularizer: null
+    kernel_constraint: null
+    kernel_initializer:
+      class_name: VarianceScaling
+      config: {distribution: uniform, mode: fan_avg, scale: 1.0, seed: null}
+    kernel_regularizer: null
+    name: Y
+    trainable: true
+    units: 86
+    use_bias: true
+keras_version: 2.1.4
+backend: tensorflow
+class_name: Sequential
+config:
+- class_name: LSTM
+  config:
+    activation: tanh
+    activity_regularizer: null
+    batch_input_shape: !!python/tuple [null, 50, 86]
+    bias_constraint: null
+    bias_initializer:
+      class_name: Zeros
+      config: {}
+    bias_regularizer: null
+    dropout: 0.0
+    dtype: float32
+    go_backwards: false
+    implementation: 1
+    kernel_constraint: null
+    kernel_initializer:
+      class_name: VarianceScaling
+      config: {distribution: uniform, mode: fan_avg, scale: 1.0, seed: null}
+    kernel_regularizer: null
+    name: lstm_3
+    recurrent_activation: hard_sigmoid
+    recurrent_constraint: null
+    recurrent_dropout: 0.0
+    recurrent_initializer:
+      class_name: Orthogonal
+      config: {gain: 1.0, seed: null}
+    recurrent_regularizer: null
+    return_sequences: false
+    return_state: false
+    stateful: false
+    trainable: true
+    unit_forget_bias: true
+    units: 256
+    unroll: false
+    use_bias: true
+- class_name: Dense
+  config:
+    activation: softmax
+    activity_regularizer: null
+    bias_constraint: null
+    bias_initializer:
+      class_name: Zeros
+      config: {}
+    bias_regularizer: null
+    kernel_constraint: null
+    kernel_initializer:
+      class_name: VarianceScaling
+      config: {distribution: uniform, mode: fan_avg, scale: 1.0, seed: null}
+    kernel_regularizer: null
+    name: dense_3
+    trainable: true
+    units: 86
+    use_bias: true
+keras_version: 2.1.4
+backend: tensorflow
+class_name: Sequential
+config:
+- class_name: LSTM
+  config:
+    activation: tanh
+    activity_regularizer: null
+    batch_input_shape: !!python/tuple [null, 50, 86]
+    bias_constraint: null
+    bias_initializer:
+      class_name: Zeros
+      config: {}
+    bias_regularizer: null
+    dropout: 0.0
+    dtype: float32
+    go_backwards: false
+    implementation: 1
+    kernel_constraint: null
+    kernel_initializer:
+      class_name: VarianceScaling
+      config: {distribution: uniform, mode: fan_avg, scale: 1.0, seed: null}
+    kernel_regularizer: null
+    name: LSTM
+    recurrent_activation: hard_sigmoid
+    recurrent_constraint: null
+    recurrent_dropout: 0.0
+    recurrent_initializer:
+      class_name: Orthogonal
+      config: {gain: 1.0, seed: null}
+    recurrent_regularizer: null
+    return_sequences: false
+    return_state: false
+    stateful: false
+    trainable: true
+    unit_forget_bias: true
+    units: 256
+    unroll: false
+    use_bias: true
+- class_name: Dense
+  config:
+    activation: softmax
+    activity_regularizer: null
+    bias_constraint: null
+    bias_initializer:
+      class_name: Zeros
+      config: {}
+    bias_regularizer: null
+    kernel_constraint: null
+    kernel_initializer:
+      class_name: VarianceScaling
+      config: {distribution: uniform, mode: fan_avg, scale: 1.0, seed: null}
+    kernel_regularizer: null
+    name: Y
+    trainable: true
+    units: 86
+    use_bias: true
+keras_version: 2.1.4
+backend: tensorflow
+class_name: Sequential
+config:
+- class_name: LSTM
+  config:
+    activation: tanh
+    activity_regularizer: null
+    batch_input_shape: !!python/tuple [null, 50, 86]
+    bias_constraint: null
+    bias_initializer:
+      class_name: Zeros
+      config: {}
+    bias_regularizer: null
+    dropout: 0.0
+    dtype: float32
+    go_backwards: false
+    implementation: 1
+    kernel_constraint: null
+    kernel_initializer:
+      class_name: VarianceScaling
+      config: {distribution: uniform, mode: fan_avg, scale: 1.0, seed: null}
+    kernel_regularizer: null
+    name: LSTM
+    recurrent_activation: hard_sigmoid
+    recurrent_constraint: null
+    recurrent_dropout: 0.0
+    recurrent_initializer:
+      class_name: Orthogonal
+      config: {gain: 1.0, seed: null}
+    recurrent_regularizer: null
+    return_sequences: false
+    return_state: false
+    stateful: false
+    trainable: true
+    unit_forget_bias: true
+    units: 256
+    unroll: false
+    use_bias: true
+- class_name: Dense
+  config:
+    activation: softmax
+    activity_regularizer: null
+    bias_constraint: null
+    bias_initializer:
+      class_name: Zeros
+      config: {}
+    bias_regularizer: null
+    kernel_constraint: null
+    kernel_initializer:
+      class_name: VarianceScaling
+      config: {distribution: uniform, mode: fan_avg, scale: 1.0, seed: null}
+    kernel_regularizer: null
+    name: Y
+    trainable: true
+    units: 86
+    use_bias: true
+keras_version: 2.1.4
