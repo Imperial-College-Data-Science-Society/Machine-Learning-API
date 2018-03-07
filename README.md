@@ -3,6 +3,7 @@
 
 - [Prerequisites](#prerequisites)
 - [Overview](#overview)
+- [Notebook](notebooks/Machine-Learning-API.ipynb)
 - [License](#license)
 
 ## Getting Started
